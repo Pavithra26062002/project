@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beauty Parlour</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <img src="data:image/jpeg;base64,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" alt="" style="border-radius:70px;">
+        <a class="navbar-brand fw-bold" href="#" style="font-size: 50px; color: rgba(255, 217, 0, 0.404);">
+            Beauty World
+        </a>
+
+        <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto" style="font-size: 25px;">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#service">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+<!-- Hero Section Start -->
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <div class="content text-center">
+
+            <h1>Beauty Begins Here</h1>
+
+            <p>Professional Makeup & Hair Styling</p>
+
+            <button class="btn btn-warning px-4">
+                Book Appointment
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Hero Section End -->
+
+
+
+<!-- About Section -->
+
+<section class="container py-5" id="about">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-6">
+
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e"
+            class="img-fluid rounded">
+
+        </div>
+
+        <div class="col-lg-6">
+
+            <h2 class="mb-3">About Our Salon</h2>
+
+            <p>
+                We provide premium beauty services with professional stylists.
+                Bridal makeup, hair spa, facials and skin treatments available.
+            </p>
+
+            <button class="btn btn-dark">
+                Read More
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Services Section -->
+
+<section class="service py-5 bg-light" id="service">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">Our Services</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card shadow">
+
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035"
+                    class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Hair Styling</h4>
+
+                        <p>Modern haircut and hair spa services.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card shadow">
+
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f"
+                    class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Bridal Makeup</h4>
+
+                        <p>HD bridal makeup for all occasions.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+                <div class="card shadow">
+
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15"
+                    class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Facial Treatment</h4>
+
+                        <p>Glow skin care and facial treatments.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Gallery Section -->
+
+<section class="container py-5" id="gallery">
+
+    <h2 class="text-center mb-5">Gallery</h2>
+
+    <div class="row g-3">
+
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+            class="gallery-img">
+        </div>
+
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df"
+            class="gallery-img">
+        </div>
+
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+            class="gallery-img">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Contact Section -->
+
+<section class="contact py-5 bg-dark text-white" id="contact">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">Contact Us</h2>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <input type="text" placeholder="Your Name"
+                class="form-control mb-3">
+
+                <input type="email" placeholder="Email"
+                class="form-control mb-3">
+
+                <textarea rows="5"
+                class="form-control mb-3"
+                placeholder="Message"></textarea>
+
+                <button class="btn btn-warning">
+                    Send Message
+                </button>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h5>Salon Address</h5>
+
+                <p>Chennai, Tamil Nadu</p>
+
+                <h5>Phone</h5>
+
+                <p>+91 9876543210</p>
+
+                <div class="social mt-4">
+
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer class="bg-black text-center text-white p-3">
+
+    <p>
+        © 2026 Glow Beauty Salon | All Rights Reserved
+    </p>
+
+</footer>
+
+</body>
+</html>

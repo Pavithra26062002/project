@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* Hero Section */
+
+.hero{
+    background-image:url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f");
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    font-size: 25px;
+}
+
+
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+#about:hover {
+    animation-name: box;
+    animation-duration: 5s;
+}
+@keyframes box{
+    from{
+        transform: translate(-900px);
+
+    }
+    to{
+        transform: translate(100px);
+
+    }
+}
+
+
+.content h1{
+    color:white;
+    font-size:70px;
+    font-weight:bold;
+}
+
+.content p{
+    color:white;
+    font-size:25px;
+    margin:20px 0;
+}
+
+/* Service Cards */
+
+.card{
+    transition:0.5s;
+    border:none;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    height:300px;
+    object-fit:cover;
+}
+
+/* Gallery */
+
+.gallery-img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.5s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.05);
+}
+
+/* Contact */
+
+.contact i{
+    font-size:30px;
+    margin-right:15px;
+    cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .content h1{
+        font-size:40px;
+    }
+
+    .content p{
+        font-size:18px;
+    }
+
+}
